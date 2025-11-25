@@ -26,7 +26,6 @@ function LifeGrid({ name, birthDate, onReset }: LifeGridProps) {
         <div
           key={i}
           className={`cell ${isLived ? 'lived' : 'future'}`}
-          title={`Week ${i + 1}`}
         />
       )
     }
