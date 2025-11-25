@@ -19,7 +19,6 @@ function LifeGrid({ name, birthDate, onReset }: LifeGridProps) {
 
   const renderGrid = () => {
     const cells = []
-    const weeksPerRow = 52 // one year per row
 
     for (let i = 0; i < totalWeeks; i++) {
       const isLived = i < weeksLived
@@ -37,7 +36,6 @@ function LifeGrid({ name, birthDate, onReset }: LifeGridProps) {
 
   const yearsLived = Math.floor(weeksLived / 52)
   const remainingWeeks = weeksLived % 52
-  const percentageLived = ((weeksLived / totalWeeks) * 100).toFixed(1)
 
   return (
     <div className="life-grid-container">
