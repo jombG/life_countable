@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Life Countable
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Visualize your life in weeks. Every week matters.
 
-Currently, two official plugins are available:
+A minimalist web application that visualizes your life as a grid of weeks. The average human life spans approximately **73.5 years** — that's only **3,827 weeks**. Each cell in the grid represents one week of your life: lived or yet to come.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live Demo:** [life-countable.org](https://life-countable.org)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What is this?
 
-## Expanding the ESLint configuration
+Life Countable helps you see the bigger picture. By visualizing your entire life as a grid of weeks, you can:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Gain perspective** on how much time you've lived
+- **Appreciate each week** as a finite, valuable unit
+- **Reflect** on how you spend your time
+- **Visualize** your life's progress in a tangible way
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## How it works
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Enter your name and birth date**
+2. The app calculates how many weeks you've lived
+3. See your life as a grid of 3,827 cells:
+   - 🟧 **Orange cells** = weeks you've already lived
+   - ⬛ **Gray cells** = weeks yet to come
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Your data is saved locally in your browser — no accounts, no tracking.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Design & Technology
+
+Built with a minimalist, lo-fi aesthetic inspired by early computing interfaces:
+
+- **[Departure Mono](https://departuremono.com/)** — A monospaced pixel font by Helena Zhang
+- **React + TypeScript + Vite** — Modern web stack
+- **Pure CSS** — No UI frameworks, custom responsive design
+- **LocalStorage** — Your data stays in your browser
+
+The design is inspired by GitHub's contribution graph and the concept of "Life in Weeks" popularized by Tim Urban's Wait But Why.
+
+---
+
+## Why 3,827 weeks?
+
+73.5 years × 52 weeks = **3,827 weeks**
+
+This is the current global average life expectancy. Of course, everyone's journey is different — this is just a reference point to help visualize the finite nature of time.
+
+---
+
+<p align="center">
+  <sub>Every week is precious. Make them count.</sub>
+</p>
